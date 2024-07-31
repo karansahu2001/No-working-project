@@ -12,6 +12,6 @@ public interface ProductDetailsRepository extends JpaRepository<ProductDetails, 
     List<ProductDetails> findByUserID(String userID);
 
     // Custom method using @Query annotation
-    @Query("SELECT p FROM ProductDetails p WHERE p.status = ?1")
-    List<ProductDetails> findByStatus(int status);
+    @Query("SELECT p FROM ProductDetails p WHERE p.id = ?1 AND p.status=1")
+    List<ProductDetails> findByProductDetailID(int id);
 }

@@ -19,6 +19,4 @@ public class WorkingTimeDTO {
     private LocalTime startTime;
     private LocalTime endTime;
     private long productDetailsId;
-
-
 }

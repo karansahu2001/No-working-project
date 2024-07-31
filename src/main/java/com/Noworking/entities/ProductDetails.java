@@ -47,4 +47,7 @@ public class ProductDetails {
 
     @OneToMany(mappedBy = "productDetails", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Rating> ratings;
+
+    @OneToMany(mappedBy = "productDetails", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<BookingDetails> bookingDetails = new ArrayList<>();
 }
