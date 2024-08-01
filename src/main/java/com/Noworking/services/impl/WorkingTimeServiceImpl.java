@@ -25,7 +25,13 @@ public class WorkingTimeServiceImpl implements WorkingTimeService {
 
     @Override
     public WorkingTimeDTO save(WorkingTimeDTO workingTimeDTO) {
-        return null;
+        long productDetailsId = workingTimeDTO.getProductDetailsId();
+        ProductDetails ProductDetail = productDetailsRepository.findByProductDetailID(productDetailsId).orElseThrow(() -> new RuntimeException("Product Details time not found with id: " + productDetailsId));
+        WorkingTime workingTime = modelMapper.map(workingTimeDTO, WorkingTime.class);
+        workingTime.setProductDetails(ProductDetail);
+        WorkingTime save = workingTimeRepository.save(workingTime);
+        return modelMapper.map(save, WorkingTimeDTO.class);
+
     }
 
     @Override
