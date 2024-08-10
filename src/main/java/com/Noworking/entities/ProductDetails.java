@@ -22,7 +22,7 @@ public class ProductDetails {
     private long id;
 
     @Column(name = "user_id", unique=true, nullable=false)
-    private String userID;
+    private Long userID;
 
     @Column(nullable=false)
     private int price;

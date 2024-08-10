@@ -13,4 +13,5 @@ public interface WorkingTimeService {
     List<WorkingTimeDTO> findByProductId(long productId);
     List<WorkingTimeDTO> findByUserId(long userId);
     List<WorkingTimeDTO> findByDate(String startDate, String endDate);
+    List<WorkingTimeDTO> save(List<WorkingTimeDTO> workingTimeDTOList, long productId);
 }

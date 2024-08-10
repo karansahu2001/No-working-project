@@ -12,11 +12,19 @@ import java.time.LocalTime;
 @Data
 public class WorkingTimeDTO {
     private long id;
-    private String availabilityType;
+    private AvailabilityType availabilityType;
     private LocalDate specificDate;
     private Integer dayOfWeek;
     private Integer dayOfMonth;
     private LocalTime startTime;
     private LocalTime endTime;
     private long productDetailsId;
+    public enum AvailabilityType {
+        WEEKLY,
+        MONTHLY,
+        SPECIFIC_DATE,
+        EVERY_DAY,
+        WEEKEND,
+        WEEKDAY
+    }
 }

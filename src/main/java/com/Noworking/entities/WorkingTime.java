@@ -36,7 +36,10 @@ public class WorkingTime {
     public enum AvailabilityType {
         WEEKLY,
         MONTHLY,
-        SPECIFIC_DATE
+        SPECIFIC_DATE,
+        EVERY_DAY,
+        WEEKEND,
+        WEEKDAY
     }
 
     @ManyToOne

@@ -12,11 +12,10 @@ import java.util.List;
 @Data
 public class ProductDetailsDTO {
     private long id;
-    private String userID;
+    private long userID;
     private int price;
     private int status;
     private Date updatedAt;  // Changed from 'update' to 'updatedAt'
-
     private Date update;
     private long phone;
     private String email;
